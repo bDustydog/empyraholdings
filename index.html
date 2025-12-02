@@ -157,4 +157,125 @@
       gap: 24px;
     }
 
-    .contact-ca
+    .contact-card {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .contact-row {
+      font-size: 14px;
+      color: var(--text-main);
+    }
+
+    .contact-row span.label {
+      display: inline-block;
+      min-width: 90px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 11px;
+    }
+
+    a.contact-link {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(203, 164, 90, 0.35);
+      padding-bottom: 1px;
+    }
+
+    a.contact-link:hover {
+      border-bottom-color: rgba(203, 164, 90, 0.8);
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-muted);
+      text-align: center;
+      opacity: 0.8;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      main {
+        gap: 20px;
+      }
+
+      .two-col {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand-left">
+        <div class="logo-glow-wrapper">
+          <div class="logo-circle">
+            <!-- IMPORTANT: this must match the file name in the repo exactly -->
+            <img src="Stamp.jpg" alt="Empyra Holdings Seal" />
+          </div>
+        </div>
+        <div class="brand-text">
+          <h1>Empyra Holdings FZ LLC</h1>
+          <h2>Private Holding Company</h2>
+          <h3 class="license">License No. 5034997 – RAK, U.A.E.</h3>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Row 1: Mandate full width -->
+      <section class="card">
+        <h3>Mandate</h3>
+        <p>
+          Empyra Holdings FZ LLC is a privately held vehicle established to manage
+          long-term positions in operating companies, digital assets, and
+          selected private opportunities. The focus is capital preservation,
+          disciplined growth, and the ability to act quickly when conviction is
+          high.
+        </p>
+      </section>
+
+      <!-- Row 2: Jurisdiction (left) and Contact (right) -->
+      <div class="two-col">
+        <section class="card">
+          <h3>Jurisdiction</h3>
+          <p class="muted">
+            Empyra Holdings FZ LLC is incorporated in Ras Al Khaimah, United Arab Emirates,
+            as a licenced holding entity within the RAK Free Zone.
+          </p>
+        </section>
+
+        <section class="card contact-card">
+          <h3>Contact</h3>
+          <div class="contact-row">
+            <span class="label">Email</span>
+            <a class="contact-link" href="mailto:admin@empyraholdings.com">admin@empyraholdings.com</a>
+          </div>
+          <div class="contact-row">
+            <span class="label">Phone</span>
+            <span class="muted">+XXX&nbsp;XXX&nbsp;XXXX (to be advised)</span>
+          </div>
+          <div class="contact-row">
+            <span class="label">Jurisdiction</span>
+            <span class="muted">Ras Al Khaimah, United Arab Emirates</span>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      Empyra Holdings FZ LLC &copy; 2025
+    </footer>
+  </div>
+</body>
+</html>
