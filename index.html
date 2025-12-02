@@ -51,10 +51,10 @@
       gap: 34px;
     }
 
-    /* BIGGER LOGO (200%) */
+    /* BIGGER LOGO + ZOOMED STAMP */
     .logo-glow-wrapper {
-      width: 400px;
-      height: 400px;
+      width: 420px;
+      height: 420px;
       border-radius: 50%;
       background:
         radial-gradient(circle at center,
@@ -68,8 +68,8 @@
     }
 
     .logo-circle {
-      width: 310px;
-      height: 310px;
+      width: 340px;
+      height: 340px;
       border-radius: 50%;
       overflow: hidden;
       background: #ffffff;
@@ -82,7 +82,9 @@
     .logo-circle img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      /* zoom the stamp inside the circle so it fills more space */
+      transform: scale(1.6);
+      transform-origin: center center;
     }
 
     .brand-text h1 {
@@ -119,7 +121,7 @@
     }
 
     .card h3 {
-      font-size: 30px; /* header bigger */
+      font-size: 30px;
       margin-bottom: 14px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -127,16 +129,22 @@
     }
 
     .card p {
-      font-size: 24px; /* 50% bigger */
+      font-size: 24px;
       line-height: 1.8;
       color: var(--text-main);
       opacity: 0.94;
     }
 
-    /* CENTER THE MANDATE CARD */
+    /* MANDATE – FULL-WIDTH & CENTERED TEXT */
     .mandate-card {
-      max-width: 980px;
-      margin: 0 auto;
+      width: 100%;          /* same width as the row below */
+      margin: 0;            /* no extra margins so borders align */
+      text-align: center;   /* center all text inside */
+    }
+
+    .mandate-card h3,
+    .mandate-card p {
+      text-align: center;
     }
 
     .two-col {
@@ -174,6 +182,10 @@
       font-size: 18px;
     }
 
+    a.contact-link:hover {
+      border-bottom-color: rgba(203, 164, 90, 0.8);
+    }
+
     .license-line {
       margin-top: 18px;
       font-size: 20px;
@@ -199,10 +211,6 @@
 
       .two-col {
         grid-template-columns: 1fr;
-      }
-
-      .mandate-card {
-        max-width: 100%;
       }
     }
   </style>
@@ -271,7 +279,6 @@
             <span class="label">Phone</span>
             <span>+971&nbsp;52&nbsp;415&nbsp;8104</span>
           </div>
-
         </section>
 
       </div>
