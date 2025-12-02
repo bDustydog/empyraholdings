@@ -9,10 +9,10 @@
       --bg: #050b18;
       --bg-alt: #071024;
       --accent: #cba45a;
-      --accent-soft: rgba(203, 164, 90, 0.22);
+      --accent-soft: rgba(203, 164, 90, 0.35);
       --text-main: #f7f7fb;
       --text-muted: #9ba3c2;
-      --border-soft: rgba(255, 255, 255, 0.08);
+      --border-soft: rgba(203, 164, 90, 0.55);
       --card-radius: 20px;
       --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.7);
     }
@@ -40,25 +40,25 @@
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      gap: 28px;
-      margin-bottom: 32px;
+      gap: 32px;
+      margin-bottom: 36px;
     }
 
     .brand-left {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 26px;
     }
 
     .logo-glow-wrapper {
-      width: 170px;
-      height: 170px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       background:
         radial-gradient(circle at center,
           rgba(203, 164, 90, 0.9) 0,
-          rgba(203, 164, 90, 0.28) 40%,
-          transparent 75%);
+          rgba(203, 164, 90, 0.3) 40%,
+          transparent 80%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -66,12 +66,12 @@
     }
 
     .logo-circle {
-      width: 130px;
-      height: 130px;
+      width: 155px;
+      height: 155px;
       border-radius: 50%;
       overflow: hidden;
       background: #ffffff;
-      border: 1px solid rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(0, 0, 0, 0.12);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -84,41 +84,33 @@
     }
 
     .brand-text h1 {
-      font-size: 32px;
-      letter-spacing: 0.04em;
+      font-size: 36px;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: var(--accent); /* gold title */
+      color: var(--accent);
     }
 
     .brand-text h2 {
-      font-size: 15px;
-      margin-top: 4px;
+      font-size: 16px;
+      margin-top: 6px;
       font-weight: 500;
       text-transform: uppercase;
-      color: var(--accent); /* gold subtitle */
-      letter-spacing: 0.18em;
-    }
-
-    .license {
-      font-size: 13px;
-      margin-top: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--accent); /* gold licence line */
+      color: var(--accent);
+      letter-spacing: 0.2em;
     }
 
     main {
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 26px;
     }
 
     .card {
       background: linear-gradient(145deg, rgba(7, 16, 36, 0.96), rgba(10, 21, 48, 0.98));
       border-radius: var(--card-radius);
-      padding: 26px 24px 24px;
+      padding: 28px 26px 26px;
       box-shadow: var(--shadow-soft);
-      border: 1px solid var(--border-soft);
+      border: 1px solid var(--border-soft); /* gold block border */
       position: relative;
       overflow: hidden;
     }
@@ -132,23 +124,29 @@
     }
 
     .card h3 {
-      font-size: 18px;
-      margin-bottom: 10px;
+      font-size: 20px;
+      margin-bottom: 12px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--accent); /* gold section titles */
+      color: var(--accent);
     }
 
     .card p {
-      font-size: 15px;
-      line-height: 1.7;
+      font-size: 16px;
+      line-height: 1.8;
       color: var(--text-main);
-      opacity: 0.92;
+      opacity: 0.94;
     }
 
     .muted {
       color: var(--text-muted);
       opacity: 0.9;
+    }
+
+    /* Mandate centred on page */
+    .mandate-card {
+      max-width: 920px;
+      margin: 0 auto;
     }
 
     .two-col {
@@ -160,11 +158,11 @@
     .contact-card {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
     }
 
     .contact-row {
-      font-size: 14px;
+      font-size: 15px;
       color: var(--text-main);
     }
 
@@ -188,9 +186,17 @@
       border-bottom-color: rgba(203, 164, 90, 0.8);
     }
 
+    .license-line {
+      margin-top: 10px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+    }
+
     footer {
-      margin-top: 40px;
-      font-size: 11px;
+      margin-top: 44px;
+      font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0.16em;
       color: var(--text-muted);
@@ -205,11 +211,15 @@
       }
 
       main {
-        gap: 20px;
+        gap: 22px;
       }
 
       .two-col {
         grid-template-columns: minmax(0, 1fr);
+      }
+
+      .mandate-card {
+        max-width: 100%;
       }
     }
   </style>
@@ -227,21 +237,19 @@
         <div class="brand-text">
           <h1>Empyra Holdings FZ LLC</h1>
           <h2>Private Holding Company</h2>
-          <h3 class="license">License No. 5034997 – RAK, U.A.E.</h3>
         </div>
       </div>
     </header>
 
     <main>
-      <!-- Row 1: Mandate full width -->
-      <section class="card">
+      <!-- Row 1: Mandate centred -->
+      <section class="card mandate-card">
         <h3>Mandate</h3>
         <p>
           Empyra Holdings FZ LLC is a privately held vehicle established to manage
-          long-term positions in operating companies, digital assets, and
-          selected private opportunities. The focus is capital preservation,
-          disciplined growth, and the ability to act quickly when conviction is
-          high.
+          long-term positions in operating companies, digital assets, and selected
+          private opportunities. The focus is capital preservation, disciplined
+          growth, and the ability to act quickly when conviction is high.
         </p>
       </section>
 
@@ -249,9 +257,11 @@
       <div class="two-col">
         <section class="card">
           <h3>Jurisdiction</h3>
-          <p class="muted">
-            Empyra Holdings FZ LLC is incorporated in Ras Al Khaimah, United Arab Emirates,
-            as a licenced holding entity within the RAK Free Zone.
+          <p>
+            Empyra Holdings FZ LLC is incorporated in Ras Al Khaimah, United Arab Emirates.
+          </p>
+          <p class="license-line">
+            License No. 5034997 &mdash; RAK, U.A.E.
           </p>
         </section>
 
@@ -263,7 +273,7 @@
           </div>
           <div class="contact-row">
             <span class="label">Phone</span>
-            <span class="muted">+XXX&nbsp;XXX&nbsp;XXXX (to be advised)</span>
+            <span class="muted">+971&nbsp;52&nbsp;415&nbsp;8104</span>
           </div>
           <div class="contact-row">
             <span class="label">Jurisdiction</span>
