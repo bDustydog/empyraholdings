@@ -39,26 +39,26 @@
     header {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 24px;
+      justify-content: flex-start;
+      gap: 28px;
       margin-bottom: 32px;
     }
 
     .brand-left {
       display: flex;
       align-items: center;
-      gap: 22px;
+      gap: 24px;
     }
 
     .logo-glow-wrapper {
-      width: 140px;
-      height: 140px;
+      width: 170px;
+      height: 170px;
       border-radius: 50%;
       background:
         radial-gradient(circle at center,
           rgba(203, 164, 90, 0.9) 0,
           rgba(203, 164, 90, 0.28) 40%,
-          transparent 72%);
+          transparent 75%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -66,8 +66,8 @@
     }
 
     .logo-circle {
-      width: 104px;
-      height: 104px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
       overflow: hidden;
       background: #ffffff;
@@ -87,6 +87,7 @@
       font-size: 32px;
       letter-spacing: 0.04em;
       text-transform: uppercase;
+      color: var(--accent); /* gold title */
     }
 
     .brand-text h2 {
@@ -94,7 +95,7 @@
       margin-top: 4px;
       font-weight: 500;
       text-transform: uppercase;
-      color: var(--accent);
+      color: var(--accent); /* gold subtitle */
       letter-spacing: 0.18em;
     }
 
@@ -103,36 +104,13 @@
       margin-top: 6px;
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      color: var(--text-muted);
-    }
-
-    .jurisdiction {
-      text-align: right;
-      font-size: 13px;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      line-height: 1.5;
+      color: var(--accent); /* gold licence line */
     }
 
     main {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      display: flex;
+      flex-direction: column;
       gap: 24px;
-    }
-
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .jurisdiction {
-        text-align: left;
-      }
-
-      main {
-        grid-template-columns: minmax(0, 1fr);
-      }
     }
 
     .card {
@@ -158,7 +136,7 @@
       margin-bottom: 10px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--accent);
+      color: var(--accent); /* gold section titles */
     }
 
     .card p {
@@ -173,102 +151,10 @@
       opacity: 0.9;
     }
 
-    .contact-card {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 24px;
     }
 
-    .contact-row {
-      font-size: 14px;
-      color: var(--text-main);
-    }
-
-    .contact-row span.label {
-      display: inline-block;
-      min-width: 70px;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-size: 11px;
-    }
-
-    a.contact-link {
-      color: var(--accent);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(203, 164, 90, 0.35);
-      padding-bottom: 1px;
-    }
-
-    a.contact-link:hover {
-      border-bottom-color: rgba(203, 164, 90, 0.8);
-    }
-
-    footer {
-      margin-top: 40px;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--text-muted);
-      text-align: center;
-      opacity: 0.8;
-    }
-  </style>
-</head>
-<body>
-  <div class="page">
-    <header>
-      <div class="brand-left">
-        <div class="logo-glow-wrapper">
-          <div class="logo-circle">
-            <!-- Make sure the filename below matches the real file in the repo -->
-            <img src="stamp.png" alt="Empyra Holdings Seal" />
-          </div>
-        </div>
-        <div class="brand-text">
-          <h1>Empyra Holdings FZ LLC</h1>
-          <h2>Private Holding Company</h2>
-          <h3 class="license">License No. 5034997 – RAK, U.A.E.</h3>
-        </div>
-      </div>
-      <div class="jurisdiction">
-        RAK Free Zone &middot; United Arab Emirates<br />
-        Licenced Holding Entity
-      </div>
-    </header>
-
-    <main>
-      <section class="card">
-        <h3>Mandate</h3>
-        <p>
-          Empyra Holdings FZ LLC is a privately held vehicle established to manage
-          long-term positions in operating companies, digital assets, and
-          selected private opportunities. The focus is capital preservation,
-          disciplined growth, and the ability to act quickly when conviction is
-          high.
-        </p>
-      </section>
-
-      <section class="card contact-card">
-        <h3>Contact</h3>
-        <div class="contact-row">
-          <span class="label">Email</span>
-          <a class="contact-link" href="mailto:admin@empyraholdings.com">admin@empyraholdings.com</a>
-        </div>
-        <div class="contact-row">
-          <span class="label">Phone</span>
-          <span class="muted">+XXX&nbsp;XXX&nbsp;XXXX (to be advised)</span>
-        </div>
-        <div class="contact-row">
-          <span class="label">Jurisdiction</span>
-          <span class="muted">Ras Al Khaimah, United Arab Emirates</span>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      Empyra Holdings FZ LLC &copy; 2025
-    </footer>
-  </div>
-</body>
-</html>
+    .contact-ca
