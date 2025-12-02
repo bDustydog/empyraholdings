@@ -31,28 +31,30 @@
     }
 
     .page {
-      max-width: 1060px;
+      max-width: 1100px;
       margin: 0 auto;
       padding: 32px 18px 64px;
     }
 
+    /* HEADER */
     header {
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      gap: 32px;
+      gap: 40px;
       margin-bottom: 36px;
     }
 
     .brand-left {
       display: flex;
       align-items: center;
-      gap: 26px;
+      gap: 34px;
     }
 
+    /* BIGGER LOGO (200%) */
     .logo-glow-wrapper {
-      width: 200px;
-      height: 200px;
+      width: 400px;
+      height: 400px;
       border-radius: 50%;
       background:
         radial-gradient(circle at center,
@@ -66,8 +68,8 @@
     }
 
     .logo-circle {
-      width: 155px;
-      height: 155px;
+      width: 310px;
+      height: 310px;
       border-radius: 50%;
       overflow: hidden;
       background: #ffffff;
@@ -84,95 +86,84 @@
     }
 
     .brand-text h1 {
-      font-size: 36px;
-      letter-spacing: 0.06em;
+      font-size: 40px;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--accent);
     }
 
     .brand-text h2 {
-      font-size: 16px;
+      font-size: 18px;
       margin-top: 6px;
       font-weight: 500;
       text-transform: uppercase;
       color: var(--accent);
-      letter-spacing: 0.2em;
+      letter-spacing: 0.22em;
     }
 
+    /* GENERAL CARDS */
     main {
       display: flex;
       flex-direction: column;
-      gap: 26px;
+      gap: 30px;
     }
 
     .card {
       background: linear-gradient(145deg, rgba(7, 16, 36, 0.96), rgba(10, 21, 48, 0.98));
       border-radius: var(--card-radius);
-      padding: 28px 26px 26px;
+      padding: 32px 30px;
       box-shadow: var(--shadow-soft);
-      border: 1px solid var(--border-soft); /* gold block border */
+      border: 1px solid var(--border-soft);
       position: relative;
       overflow: hidden;
     }
 
-    .card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top left, rgba(203, 164, 90, 0.12), transparent 55%);
-      pointer-events: none;
-    }
-
     .card h3 {
-      font-size: 20px;
-      margin-bottom: 12px;
+      font-size: 30px; /* header bigger */
+      margin-bottom: 14px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--accent);
     }
 
     .card p {
-      font-size: 16px;
+      font-size: 24px; /* 50% bigger */
       line-height: 1.8;
       color: var(--text-main);
       opacity: 0.94;
     }
 
-    .muted {
-      color: var(--text-muted);
-      opacity: 0.9;
-    }
-
-    /* Mandate centred on page */
+    /* CENTER THE MANDATE CARD */
     .mandate-card {
-      max-width: 920px;
+      max-width: 980px;
       margin: 0 auto;
     }
 
     .two-col {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      gap: 24px;
+      gap: 28px;
     }
 
+    /* CONTACT BLOCK */
     .contact-card {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 16px;
     }
 
     .contact-row {
-      font-size: 15px;
+      font-size: 18px;
       color: var(--text-main);
     }
 
     .contact-row span.label {
       display: inline-block;
-      min-width: 90px;
+      min-width: 110px;
       color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      font-size: 11px;
+      font-size: 12px;
     }
 
     a.contact-link {
@@ -180,28 +171,24 @@
       text-decoration: none;
       border-bottom: 1px solid rgba(203, 164, 90, 0.35);
       padding-bottom: 1px;
-    }
-
-    a.contact-link:hover {
-      border-bottom-color: rgba(203, 164, 90, 0.8);
+      font-size: 18px;
     }
 
     .license-line {
-      margin-top: 10px;
-      font-size: 14px;
+      margin-top: 18px;
+      font-size: 20px;
       text-transform: uppercase;
       letter-spacing: 0.14em;
       color: var(--accent);
     }
 
     footer {
-      margin-top: 44px;
+      margin-top: 60px;
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0.16em;
       color: var(--text-muted);
       text-align: center;
-      opacity: 0.8;
     }
 
     @media (max-width: 768px) {
@@ -210,12 +197,8 @@
         align-items: flex-start;
       }
 
-      main {
-        gap: 22px;
-      }
-
       .two-col {
-        grid-template-columns: minmax(0, 1fr);
+        grid-template-columns: 1fr;
       }
 
       .mandate-card {
@@ -224,16 +207,19 @@
     }
   </style>
 </head>
+
 <body>
   <div class="page">
+
+    <!-- HEADER -->
     <header>
       <div class="brand-left">
         <div class="logo-glow-wrapper">
           <div class="logo-circle">
-            <!-- IMPORTANT: this must match the file name in the repo exactly -->
             <img src="Stamp.jpg" alt="Empyra Holdings Seal" />
           </div>
         </div>
+
         <div class="brand-text">
           <h1>Empyra Holdings FZ LLC</h1>
           <h2>Private Holding Company</h2>
@@ -242,7 +228,8 @@
     </header>
 
     <main>
-      <!-- Row 1: Mandate centred -->
+
+      <!-- MANDATE -->
       <section class="card mandate-card">
         <h3>Mandate</h3>
         <p>
@@ -253,39 +240,47 @@
         </p>
       </section>
 
-      <!-- Row 2: Jurisdiction (left) and Contact (right) -->
+      <!-- JURISDICTION + CONTACT -->
       <div class="two-col">
+
+        <!-- JURISDICTION -->
         <section class="card">
           <h3>Jurisdiction</h3>
           <p>
-            Empyra Holdings FZ LLC is incorporated in Ras Al Khaimah, United Arab Emirates.
+            Empyra Holdings FZ LLC is incorporated in Ras Al Khaimah,
+            United Arab Emirates.
           </p>
+
           <p class="license-line">
-            License No. 5034997 &mdash; RAK, U.A.E.
+            License No. 5034997
           </p>
         </section>
 
+        <!-- CONTACT -->
         <section class="card contact-card">
           <h3>Contact</h3>
+
           <div class="contact-row">
             <span class="label">Email</span>
-            <a class="contact-link" href="mailto:admin@empyraholdings.com">admin@empyraholdings.com</a>
+            <a class="contact-link" href="mailto:admin@empyraholdings.com">
+              admin@empyraholdings.com
+            </a>
           </div>
+
           <div class="contact-row">
             <span class="label">Phone</span>
-            <span class="muted">+971&nbsp;52&nbsp;415&nbsp;8104</span>
+            <span>+971&nbsp;52&nbsp;415&nbsp;8104</span>
           </div>
-          <div class="contact-row">
-            <span class="label">Jurisdiction</span>
-            <span class="muted">Ras Al Khaimah, United Arab Emirates</span>
-          </div>
+
         </section>
+
       </div>
     </main>
 
     <footer>
-      Empyra Holdings FZ LLC &copy; 2025
+      Empyra Holdings FZ LLC © 2025
     </footer>
+
   </div>
 </body>
 </html>
