@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Empyra Holdings FZ LLC – Private Holding Company</title>
+  <style>
+    :root {
+      --bg: #050b18;
+      --bg-alt: #071024;
+      --accent: #cba45a;
+      --accent-soft: rgba(203, 164, 90, 0.22);
+      --text-main: #f7f7fb;
+      --text-muted: #9ba3c2;
+      --border-soft: rgba(255, 255, 255, 0.08);
+      --card-radius: 20px;
+      --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.7);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #0c2145 0, #050b18 45%, #02040a 100%);
+      color: var(--text-main);
+      min-height: 100vh;
+    }
+
+    .page {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 32px 18px 64px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .brand-left {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .logo-glow-wrapper {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at center,
+          rgba(203, 164, 90, 0.9) 0,
+          rgba(203, 164, 90, 0.28) 40%,
+          transparent 72%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .logo-circle {
+      width: 104px;
+      height: 104px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .brand-text h1 {
+      font-size: 32px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .brand-text h2 {
+      font-size: 15px;
+      margin-top: 4px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: var(--accent);
+      letter-spacing: 0.18em;
+    }
+
+    .jurisdiction {
+      text-align: right;
+      font-size: 13px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .jurisdiction {
+        text-align: left;
+      }
+
+      main {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .card {
+      background: linear-gradient(145deg, rgba(7, 16, 36, 0.96), rgba(10, 21, 48, 0.98));
+      border-radius: var(--card-radius);
+      padding: 26px 24px 24px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(203, 164, 90, 0.12), transparent 55%);
+      pointer-events: none;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .card p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text-main);
+      opacity: 0.92;
+    }
+
+    .muted {
+      color: var(--text-muted);
+      opacity: 0.9;
+    }
+
+    .contact-card {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .contact-row {
+      font-size: 14px;
+      color: var(--text-main);
+    }
+
+    .contact-row span.label {
+      display: inline-block;
+      min-width: 70px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 11px;
+    }
+
+    a.contact-link {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(203, 164, 90, 0.35);
+      padding-bottom: 1px;
+    }
+
+    a.contact-link:hover {
+      border-bottom-color: rgba(203, 164, 90, 0.8);
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-muted);
+      text-align: center;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand-left">
+        <div class="logo-glow-wrapper">
+          <div class="logo-circle">
+            <!-- Ensure stamp.png is in the same folder as this HTML file -->
+            <img src="stamp.png" alt="Empyra Holdings Seal" />
+          </div>
+        </div>
+        <div class="brand-text">
+          <h1>Empyra Holdings FZ LLC</h1>
+          <h2>Private Holding Company</h2>
+        </div>
+      </div>
+      <div class="jurisdiction">
+        RAK Free Zone &middot; United Arab Emirates<br />
+        Licenced Holding Entity
+      </div>
+    </header>
+
+    <main>
+      <section class="card">
+        <h3>Mandate</h3>
+        <p>
+          Empyra Holdings FZ LLC is a privately held vehicle established to manage
+          long-term positions in operating companies, digital assets, and
+          selected private opportunities. The focus is capital preservation,
+          disciplined growth, and the ability to act quickly when conviction is
+          high.
+        </p>
+      </section>
+
+      <section class="card contact-card">
+        <h3>Contact</h3>
+        <div class="contact-row">
+          <span class="label">Email</span>
+          <a class="contact-link" href="mailto:admin@empyraholdings.com">admin@empyraholdings.com</a>
+        </div>
+        <div class="contact-row">
+          <span class="label">Phone</span>
+          <span class="muted">+XXX&nbsp;XXX&nbsp;XXXX (to be advised)</span>
+        </div>
+        <div class="contact-row">
+          <span class="label">Jurisdiction</span>
+          <span class="muted">Ras Al Khaimah, United Arab Emirates</span>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      Empyra Holdings FZ LLC &copy; 2025
+    </footer>
+  </div>
+</body>
+</html>
