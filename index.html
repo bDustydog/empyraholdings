@@ -7,12 +7,9 @@
   <style>
     :root {
       --bg: #050b18;
-      --bg-alt: #071024;
       --accent: #cba45a;
-      --accent-soft: rgba(203, 164, 90, 0.35);
       --text-main: #f7f7fb;
       --text-muted: #9ba3c2;
-      --border-soft: rgba(203, 164, 90, 0.55);
       --card-radius: 20px;
       --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.7);
     }
@@ -36,7 +33,6 @@
       padding: 32px 18px 64px;
     }
 
-    /* HEADER */
     header {
       display: flex;
       align-items: center;
@@ -45,22 +41,11 @@
       margin-bottom: 36px;
     }
 
-    .brand-left {
-      display: flex;
-      align-items: center;
-      gap: 34px;
-    }
-
-    /* BIGGER LOGO + ZOOMED STAMP */
     .logo-glow-wrapper {
       width: 420px;
       height: 420px;
       border-radius: 50%;
-      background:
-        radial-gradient(circle at center,
-          rgba(203, 164, 90, 0.9) 0,
-          rgba(203, 164, 90, 0.3) 40%,
-          transparent 80%);
+      background: radial-gradient(circle at center, rgba(203, 164, 90, 0.9) 0, rgba(203, 164, 90, 0.3) 40%, transparent 80%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -73,7 +58,6 @@
       border-radius: 50%;
       overflow: hidden;
       background: #ffffff;
-      border: 1px solid rgba(0, 0, 0, 0.12);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -82,9 +66,9 @@
     .logo-circle img {
       width: 100%;
       height: 100%;
-      /* zoom the stamp inside the circle so it fills more space */
+      object-fit: contain;
       transform: scale(1.6);
-      transform-origin: center center;
+      transform-origin: center;
     }
 
     .brand-text h1 {
@@ -103,7 +87,6 @@
       letter-spacing: 0.22em;
     }
 
-    /* GENERAL CARDS */
     main {
       display: flex;
       flex-direction: column;
@@ -115,9 +98,7 @@
       border-radius: var(--card-radius);
       padding: 32px 30px;
       box-shadow: var(--shadow-soft);
-      border: 1px solid var(--border-soft);
-      position: relative;
-      overflow: hidden;
+      border: 1px solid rgba(203, 164, 90, 0.55);
     }
 
     .card h3 {
@@ -135,25 +116,16 @@
       opacity: 0.94;
     }
 
-    /* MANDATE – FULL-WIDTH & CENTERED TEXT */
     .mandate-card {
-      width: 100%;          /* same width as the row below */
-      margin: 0;            /* no extra margins so borders align */
-      text-align: center;   /* center all text inside */
-    }
-
-    .mandate-card h3,
-    .mandate-card p {
       text-align: center;
     }
 
     .two-col {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      grid-template-columns: 1fr 1fr;
       gap: 28px;
     }
 
-    /* CONTACT BLOCK */
     .contact-card {
       display: flex;
       flex-direction: column;
@@ -162,10 +134,9 @@
 
     .contact-row {
       font-size: 18px;
-      color: var(--text-main);
     }
 
-    .contact-row span.label {
+    .contact-row .label {
       display: inline-block;
       min-width: 110px;
       color: var(--text-muted);
@@ -224,7 +195,8 @@
       <div class="brand-left">
         <div class="logo-glow-wrapper">
           <div class="logo-circle">
-            <img src="stamp.png" alt="Empyra Holdings Seal" />
+            <!-- ✅ Correctly references stamp.png in the same folder -->
+            <img src="./stamp.png" alt="Empyra Holdings Seal" />
           </div>
         </div>
 
